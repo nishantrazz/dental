@@ -1,0 +1,59 @@
+.hero-section {
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+}
+
+.animate-title {
+  animation: fadeInDown 1s ease;
+}
+
+.animate-subtitle {
+  animation: fadeInUp 1.2s ease;
+}
+
+.btn-hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-hover-scale:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.img-hover-zoom {
+  transition: transform 0.4s ease;
+}
+.img-hover-zoom:hover {
+  transform: scale(1.05);
+}
+
+.service-card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.highlight-card {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.highlight-card:hover {
+  background-color: #007bff;
+  color: white;
+  transform: scale(1.05);
+}
+
+.section-title {
+  font-weight: bold;
+  color: #007bff;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
