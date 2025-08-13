@@ -4,7 +4,7 @@ import { Form, Button } from 'react-bootstrap';
 
 const ContactUs = () => {
   return (
-    <div className="contact-page fade-in">
+    <div className="fade-in">
       <div className="container">
         
         {/* Header */}

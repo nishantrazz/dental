@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <footer
       style={{
-        background: "linear-gradient(135deg, #6cbbefff, #6de8e2ff)",
+        background: "linear-gradient(135deg, #212020ff, #4e5c5bff)",
         color: "white",
       }}
       className="pt-5 pb-3"

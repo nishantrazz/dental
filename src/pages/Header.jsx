@@ -104,7 +104,7 @@ function Header() {
             <Link className={`nav-link ${isActive("/blog") ? "active" : ""}`} to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
           </li>
           <li className="nav-item">
-            <Link className={`nav-link ${isActive("/contact") ? "active" : ""}`} to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
+            <Link className={`nav-link ${isActive("/contact") ? "active" : ""}`} to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
           </li>
           <li className="nav-item">
             <Link className={`nav-link ${isActive("/PayOnline") ? "active" : ""}`} to="/PayOnline" onClick={() => setMenuOpen(false)}>Pay Online</Link>
@@ -112,9 +112,10 @@ function Header() {
         </ul>
 
         {/* Desktop CTA Button */}
-        <Link to="/BookAppointment" className="btn book-btn d-none d-lg-block">
+        <Link to="/BookAppointment" className="cta-btn primary-btn">
           Book Appointment
         </Link>
+      
       </nav>
     </header>
   );

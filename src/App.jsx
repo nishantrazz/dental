@@ -19,7 +19,7 @@ function App() {
 
       {/* Main Content Area */}
 
-      <main className="container-fluid mt-5 p-0">
+      <main className="container-fluid mt-2 p-0">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />

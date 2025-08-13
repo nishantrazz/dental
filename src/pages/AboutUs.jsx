@@ -251,7 +251,7 @@ function AboutUs() {
           <h2 className="section-title text-center mb-4">Awards & Accreditations</h2>
           <p className="lead text-center mb-5 awards-lead">
             Proud member of the <strong>Indian Dental Association (IDA)</strong> and
-            <strong> Invisalign Certified</strong>. Recognized as the 
+            <strong> Invisalign Certified</strong>. Recognized as the
             <em> “Best Dental Clinic”</em> in the city for 3 consecutive years.
           </p>
 
@@ -319,19 +319,19 @@ function AboutUs() {
       <section className="cta-section">
         <Container>
           <h2>Book Your Consultation Today</h2>
-          <Button variant="light" size="lg" href="/BookAppointment">
-            Book Appointment
-          </Button>
-          <p>
+          <div className="cta-buttons">
+            <a href="BookAppointment" className="cta-btn primary-btn">Book Appointment</a>
+          </div>
+          {/* <p>
             <a
-              href="https://goo.gl/maps/example"
+              href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.6480872175607!2d85.51404657489115!3d25.215087630976804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2f3e0e510c31b%3A0xeecca0df9a635746!2sDr.%20Akash%20Dental%20%26%20Facial%20Trauma%20Centre!5e0!3m2!1sen!2sin!4v1755056604683!5m2!1sen!2sin"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white"
+              className="text-white1"
             >
               Visit Us on Google Maps
             </a>
-          </p>
+          </p> */}
         </Container>
       </section>
     </>

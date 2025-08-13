@@ -31,7 +31,7 @@ const blogPosts = [
 
 function Blog() {
   return (
-    <div className="blog-page py-5">
+    <div className="blog-page py-2">
       <div className="container">
         {/* ===== Header Section ===== */}
         <header className="text-center mb-5">
@@ -83,9 +83,9 @@ function Blog() {
                 Schedule a consultation with our dental experts today and take the first step
                 toward a healthier smile.
               </p>
-              <Button href= '/BookAppointment' variant="light" size="lg" className="fw-semibold px-4 rounded-pill">
-                Book Appointment
-              </Button>
+          <div className="cta-buttons">
+            <a href="BookAppointment" className="cta-btn primary-btn">Book Appointment</a>
+          </div>
             </section>
           </Col>
 
