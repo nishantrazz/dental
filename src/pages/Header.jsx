@@ -107,7 +107,7 @@ function Header() {
             <Link className={`nav-link ${isActive("/contact") ? "active" : ""}`} to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
           </li>
           <li className="nav-item">
-            <Link className={`nav-link ${isActive("/pay-online") ? "active" : ""}`} to="/pay-online" onClick={() => setMenuOpen(false)}>Pay Online</Link>
+            <Link className={`nav-link ${isActive("/PayOnline") ? "active" : ""}`} to="/PayOnline" onClick={() => setMenuOpen(false)}>Pay Online</Link>
           </li>
         </ul>
 

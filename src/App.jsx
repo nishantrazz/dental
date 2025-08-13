@@ -8,7 +8,7 @@ import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import BookAppointment from "./pages/BookAppointment";
 import Treatments from "./pages/Treatments";
-
+import PayOnline from "./pages/PayOnline";
 
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/bookAppointment" element={<BookAppointment />} />
           <Route path="/treatments" element={<Treatments />} />
-         
+         <Route path="/payonline" element={<PayOnline />} />
 
         </Routes>
       </main>

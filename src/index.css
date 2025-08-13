@@ -1005,7 +1005,7 @@ body {
 
 /* Gradient CTA card */
 .gradient-card {
-  background: linear-gradient(135deg, #3498db, #2ecc71);
+  background: linear-gradient(135deg, #4dafef, #a7fdca);
   color: white;
   padding: 50px;
   border-radius: 15px;

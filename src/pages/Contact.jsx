@@ -121,8 +121,8 @@ const ContactUs = () => {
           <div className="cta-card gradient-card">
             <h3>Your Smile Journey Starts with a Single Step.</h3>
             <div className="cta-buttons">
-              <a href="#contact-form" className="cta-btn primary-btn">Book Appointment</a>
-              <Button variant="outline-light" className="cta-btn secondary-btn">Pay Online</Button>
+              <a href="BookAppointment" className="cta-btn primary-btn">Book Appointment</a>
+              <Button href="PayOnline" variant="outline-light" className="cta-btn secondary-btn">Pay Online</Button>
             </div>
           </div>
         </section>
