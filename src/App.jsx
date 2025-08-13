@@ -5,9 +5,10 @@ import Footer from "./pages/Footer";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
-import Blog  from "./pages/Blog";
-import BookAppointment  from "./pages/BookAppointment";
-import Treatments  from "./pages/Treatments";
+import Blog from "./pages/Blog";
+import BookAppointment from "./pages/BookAppointment";
+import Treatments from "./pages/Treatments";
+
 
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
       <Header />
 
       {/* Main Content Area */}
-      <main className="container mt-5">
+
+      <main className="container-fluid mt-5 p-0">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
@@ -25,8 +27,11 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/bookAppointment" element={<BookAppointment />} />
           <Route path="/treatments" element={<Treatments />} />
+         
+
         </Routes>
       </main>
+
 
       {/* Footer */}
       <Footer />

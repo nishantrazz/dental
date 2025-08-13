@@ -11,7 +11,13 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-dark text-light pt-5 pb-3">
+    <footer
+      style={{
+        background: "linear-gradient(135deg, #6cbbefff, #6de8e2ff)",
+        color: "white",
+      }}
+      className="pt-5 pb-3"
+    >
       <Container>
         <Row className="mb-4">
           {/* About Section */}
@@ -21,7 +27,7 @@ const Footer = () => {
               alt="Clinic Logo"
               style={{ width: "120px", marginBottom: "10px" }}
             />
-            <p>
+            <p className="text-light opacity-75">
               Creating confident smiles since 2005. Providing world-class dental
               care with compassion and precision.
             </p>
@@ -29,49 +35,119 @@ const Footer = () => {
 
           {/* Quick Links */}
           <Col md={2} sm={6} className="mb-3">
-            <h5>Quick Links</h5>
+            <h5 className="fw-bold">Quick Links</h5>
             <ul className="list-unstyled">
-              <li><a href="/" className="text-light text-decoration-none">Home</a></li>
-              <li><a href="/about" className="text-light text-decoration-none">About Us</a></li>
-              <li><a href="/services" className="text-light text-decoration-none">Services</a></li>
-              <li><a href="/testimonials" className="text-light text-decoration-none">Testimonials</a></li>
-              <li><a href="/blogs" className="text-light text-decoration-none">Blogs</a></li>
-              <li><a href="/book-appointment" className="text-light text-decoration-none">Book Appointment</a></li>
+              {[
+                { text: "Home", href: "/" },
+                { text: "About Us", href: "/About" },
+                { text: "Services", href: "/services" },
+                { text: "Testimonials", href: "/Testimonials" },
+                { text: "Blogs", href: "/Blog" },
+                { text: "Book Appointment", href: "/BookAppointment" },
+              ].map((link, idx) => (
+                <li key={idx}>
+                  <a
+                    href={link.href}
+                    className="text-light text-decoration-none"
+                    style={{ transition: "color 0.3s" }}
+                    onMouseOver={(e) => (e.target.style.color = "#ffdd57")}
+                    onMouseOut={(e) => (e.target.style.color = "white")}
+                  >
+                    {link.text}
+                  </a>
+                </li>
+              ))}
             </ul>
           </Col>
 
           {/* Services List */}
           <Col md={3} sm={6} className="mb-3">
-            <h5>Our Services</h5>
+            <h5 className="fw-bold">Our Services</h5>
             <ul className="list-unstyled">
-              <li><a href="/general-dentistry" className="text-light text-decoration-none">General Dentistry</a></li>
-              <li><a href="/cosmetic-dentistry" className="text-light text-decoration-none">Cosmetic Dentistry</a></li>
-              <li><a href="/orthodontics" className="text-light text-decoration-none">Orthodontics</a></li>
-              <li><a href="/pediatric-dentistry" className="text-light text-decoration-none">Pediatric Dentistry</a></li>
-              <li><a href="/dental-implants" className="text-light text-decoration-none">Dental Implants</a></li>
+              {[
+                { text: "General Dentistry", href: "/general-dentistry" },
+                { text: "Cosmetic Dentistry", href: "/cosmetic-dentistry" },
+                { text: "Orthodontics", href: "/orthodontics" },
+                { text: "Pediatric Dentistry", href: "/pediatric-dentistry" },
+                { text: "Dental Implants", href: "/dental-implants" },
+              ].map((service, idx) => (
+                <li key={idx}>
+                  <a
+                    href={service.href}
+                    className="text-light text-decoration-none"
+                    style={{ transition: "color 0.3s" }}
+                    onMouseOver={(e) => (e.target.style.color = "#ffdd57")}
+                    onMouseOut={(e) => (e.target.style.color = "white")}
+                  >
+                    {service.text}
+                  </a>
+                </li>
+              ))}
             </ul>
           </Col>
 
           {/* Social Media */}
           <Col md={3} sm={12} className="mb-3">
-            <h5>Follow Us</h5>
+            <h5 className="fw-bold">Follow Us</h5>
             <div className="d-flex gap-3">
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="text-light fs-4"><FaFacebookF /></a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-light fs-4"><FaInstagram /></a>
-              <a href="https://wa.me/1234567890" target="_blank" rel="noreferrer" className="text-light fs-4"><FaWhatsapp /></a>
-              <a href="https://youtube.com" target="_blank" rel="noreferrer" className="text-light fs-4"><FaYoutube /></a>
+              {[
+                { icon: <FaFacebookF />, href: "https://facebook.com" },
+                { icon: <FaInstagram />, href: "https://instagram.com" },
+                { icon: <FaWhatsapp />, href: "https://wa.me/1234567890" },
+                { icon: <FaYoutube />, href: "https://youtube.com" },
+              ].map((social, idx) => (
+                <a
+                  key={idx}
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-light fs-4"
+                  style={{
+                    transition: "transform 0.3s, color 0.3s",
+                  }}
+                  onMouseOver={(e) => {
+                    e.target.style.color = "#ffdd57";
+                    e.target.style.transform = "scale(1.2)";
+                  }}
+                  onMouseOut={(e) => {
+                    e.target.style.color = "white";
+                    e.target.style.transform = "scale(1)";
+                  }}
+                >
+                  {social.icon}
+                </a>
+              ))}
             </div>
           </Col>
         </Row>
 
         {/* Bottom Bar */}
-        <Row className="border-top border-secondary pt-3">
+        <Row
+          className="pt-3 mt-3"
+          style={{ borderTop: "1px solid rgba(255,255,255,0.2)" }}
+        >
           <Col md={6} sm={12}>
-            <a href="/privacy-policy" className="text-light text-decoration-none me-3">Privacy Policy</a>
-            <a href="/terms" className="text-light text-decoration-none">Terms & Conditions</a>
+            <a
+              href="/#"
+              className="text-light text-decoration-none me-3"
+              style={{ transition: "color 0.3s" }}
+              onMouseOver={(e) => (e.target.style.color = "#ffdd57")}
+              onMouseOut={(e) => (e.target.style.color = "white")}
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="/#"
+              className="text-light text-decoration-none"
+              style={{ transition: "color 0.3s" }}
+              onMouseOver={(e) => (e.target.style.color = "#ffdd57")}
+              onMouseOut={(e) => (e.target.style.color = "white")}
+            >
+              Terms & Conditions
+            </a>
           </Col>
           <Col md={6} sm={12} className="text-md-end mt-2 mt-md-0">
-            © {currentYear} My Dental Clinic – All Rights Reserved
+            © {currentYear} Akash Dental – All Rights Reserved
           </Col>
         </Row>
       </Container>

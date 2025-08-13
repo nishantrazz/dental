@@ -1,6 +1,0 @@
-/* Only show dropdown on hover for desktop */
-@media (min-width: 992px) {
-  .nav-item.dropdown:hover .dropdown-menu {
-    display: block;
-  }
-}
