@@ -13,81 +13,76 @@ const Home = () => {
   return (
     <>
       {/* HERO SECTION */}
-<section
-  className="hero-section d-flex align-items-center text-white w-100 m-0 p-0"
-  style={{
-    backgroundImage: "url('Banner.png')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    position: "relative",
-    minHeight: "100vh",
-  }}
->
-  {/* Dark Overlay */}
-  <div
-    style={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-      backgroundColor: "rgba(0, 0, 0, 0.4)",
-    }}
-  ></div>
-
-  <div
-    className="position-relative w-100 px-4 px-md-5"
-    style={{
-      display: "flex",
-      flexWrap: "wrap",
-      alignItems: "center",
-      gap: "2rem",
-    }}
-    data-aos="fade-up"
-  >
-    <div className="col-lg-6 col-md-7 col-sm-12">
-      <div
+      <section
+        className="hero-section d-flex align-items-center text-white w-100 m-0 p-0"
         style={{
-          background: "rgba(255, 255, 255, 0.15)",
-          backdropFilter: "blur(10px)",
-          borderRadius: "16px",
-          padding: "2rem",
-          boxShadow: "0 4px 30px rgba(0,0,0,0.2)",
-          border: "1px solid rgba(255, 255, 255, 0.3)",
+          backgroundImage: "url('Banner.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          position: "relative",
+          minHeight: "100vh",
         }}
       >
-        {/* Headline with animation */}
-        <h1 className="animated-headline">
-          <span className="word">Your</span>{" "}
-          <span className="word">Smile,</span>{" "}
-          <span className="word highlight">Our</span>{" "}
-          <span className="word highlight">Priority</span>
-        </h1>
+        {/* Dark Overlay */}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0, 0, 0, 0.4)",
+          }}
+        ></div>
 
-        {/* Subheadline */}
-        <p className="lead mb-4" style={{ color: "#f8f9fa" }}>
-          Trusted dental care for healthy, confident smiles – in a safe, friendly environment.
-        </p>
+        <div
+          className="position-relative w-100 px-4 px-md-5"
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            alignItems: "center",
+            gap: "2rem",
+          }}
+          data-aos="fade-up"
+        >
+          <div className="col-lg-6 col-md-7 col-sm-12">
+            <div
+              style={{
+                background: "rgba(255, 255, 255, 0.15)",
+                backdropFilter: "blur(10px)",
+                borderRadius: "16px",
+                padding: "2rem",
+                boxShadow: "0 4px 30px rgba(0,0,0,0.2)",
+                border: "1px solid rgba(255, 255, 255, 0.3)",
+              }}
+            >
+              {/* Headline with animation */}
+              <h1 className="animated-headline">
+                <span className="word">Your</span>{" "}
+                <span className="word">Smile,</span>{" "}
+                <span className="word highlight">Our</span>{" "}
+                <span className="word highlight">Priority</span>
+              </h1>
 
-        {/* Buttons */}
-        <div className="d-flex flex-wrap gap-3">
-          <Button variant="warning" size="lg" className="fw-bold text-dark" href="/BookAppointment">
-            Book Appointment
-          </Button>
-          <Button variant="light" size="lg" className="fw-bold text-primary" href="/PayOnline">
-            Pay Online
-          </Button>
+              {/* Subheadline */}
+              <p className="lead mb-4" style={{ color: "#f8f9fa" }}>
+                Trusted dental care for healthy, confident smiles – in a safe, friendly environment.
+              </p>
+
+              {/* Buttons */}
+              <div className="d-flex flex-wrap gap-3">
+                <Button variant="warning" size="lg" className="fw-bold text-dark" href="/BookAppointment">
+                  Book Appointment
+                </Button>
+                <Button variant="light" size="lg" className="fw-bold text-primary" href="/PayOnline">
+                  Pay Online
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
+      </section>
 
       {/* ABOUT US */}
       <section className="py-5 about w-100">
@@ -116,7 +111,7 @@ const Home = () => {
       </section>
 
       {/* SERVICES */}
-      <section className="py-5 text-white w-100" style={{ backgroundColor: "#0077b6" }}>
+      <section className="py-5 text-white w-100" >
         <Container fluid className="px-3 px-md-5" data-aos="fade-up">
           <h2 className="text-center mb-4 section-title text-white fs-3 fs-md-2">
             Our Dental Services
@@ -191,10 +186,10 @@ const Home = () => {
           <p className="lead mb-4">
             Book your appointment today and let us care for your smile.
           </p>
-    <div className="cta-buttons">
-              <a href="BookAppointment" className="cta-btn primary-btn">Book Appointment</a>
-              <Button href="PayOnline" className="cta-btn secondary-btn">Pay Online</Button>
-            </div>
+          <div className="cta-buttons">
+            <a href="BookAppointment" className="cta-btn primary-btn">Book Appointment</a>
+            <Button href="PayOnline" className="cta-btn secondary-btn">Pay Online</Button>
+          </div>
         </Container>
       </section>
 
