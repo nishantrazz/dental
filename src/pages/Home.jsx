@@ -74,10 +74,10 @@ const Home = () => {
 
               {/* Buttons */}
               <div className="d-flex flex-wrap gap-3">
-             <Link to="/BookAppointment" className="cta-btn primary-btn">Book Appointment</Link>
-            <Button as={Link} to="/PayOnline" variant="outline-light" className="cta-btn secondary-btn">
-              Pay Online
-            </Button>
+                <Link to="/BookAppointment" className="cta-btn primary-btn">Book Appointment</Link>
+                <Button as={Link} to="/PayOnline" variant="outline-light" className="cta-btn secondary-btn">
+                  Pay Online
+                </Button>
               </div>
             </div>
           </div>
@@ -95,9 +95,9 @@ const Home = () => {
                 From regular check-ups to complete smile makeovers, our experienced dentists ensure you feel comfortable, informed,
                 and confident at every step.
               </p>
-              <Button href="/about" variant="primary" className="btn-hover-scale">
-                Learn More
-              </Button>
+
+              <Link to="/about" variant="primary" className="btn-hover-scale">Learn More</Link>
+
             </Col>
             <Col md={6} data-aos="fade-left">
               <img
@@ -139,7 +139,7 @@ const Home = () => {
                   <Card.Body className="d-flex flex-column">
                     <Card.Title className="fs-5">{service.title}</Card.Title>
                     <Card.Text className="fs-6">{service.desc}</Card.Text>
-                    <Button variant="light" href="#" className="mt-auto text-primary fw-bold">
+                    <Button href="#" className="mt-auto bg-light-box text-primary fw-bold">
                       Read More
                     </Button>
                   </Card.Body>
