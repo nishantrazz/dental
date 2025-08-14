@@ -4,6 +4,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "../index.css";
 import Testimonials from "./Testimonials";
+import { Link } from "react-router-dom";
+
 
 const Home = () => {
   useEffect(() => {
@@ -72,12 +74,10 @@ const Home = () => {
 
               {/* Buttons */}
               <div className="d-flex flex-wrap gap-3">
-                <Button variant="warning" size="lg" className="fw-bold text-dark" href="/BookAppointment">
-                  Book Appointment
-                </Button>
-                <Button variant="light" size="lg" className="fw-bold text-primary" href="/PayOnline">
-                  Pay Online
-                </Button>
+             <Link to="/BookAppointment" className="cta-btn primary-btn">Book Appointment</Link>
+            <Button as={Link} to="/PayOnline" variant="outline-light" className="cta-btn secondary-btn">
+              Pay Online
+            </Button>
               </div>
             </div>
           </div>
@@ -187,8 +187,10 @@ const Home = () => {
             Book your appointment today and let us care for your smile.
           </p>
           <div className="cta-buttons">
-            <a href="BookAppointment" className="cta-btn primary-btn">Book Appointment</a>
-            <Button href="PayOnline" className="cta-btn secondary-btn">Pay Online</Button>
+            <Link to="/BookAppointment" className="cta-btn primary-btn">Book Appointment</Link>
+            <Button as={Link} to="/PayOnline" variant="outline-light" className="cta-btn secondary-btn">
+              Pay Online
+            </Button>
           </div>
         </Container>
       </section>

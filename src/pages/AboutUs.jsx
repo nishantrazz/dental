@@ -3,6 +3,8 @@ import { Container, Row, Col, Button, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../index.css";
 import Testimonials from "./Testimonials";
+import { Link } from "react-router-dom";
+
 
 function AboutUs() {
   return (
@@ -320,7 +322,10 @@ function AboutUs() {
         <Container>
           <h2>Book Your Consultation Today</h2>
           <div className="cta-buttons">
-            <a href="BookAppointment" className="cta-btn primary-btn">Book Appointment</a>
+            <Link to="/BookAppointment" className="cta-btn primary-btn">
+              Book Appointment
+            </Link>
+
           </div>
           {/* <p>
             <a

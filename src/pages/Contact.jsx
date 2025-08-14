@@ -1,19 +1,20 @@
 import React from 'react';
 import '../index.css';
 import { Form, Button } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
 const ContactUs = () => {
   return (
     <div className="fade-in">
       <div className="container">
-        
+
         {/* Header */}
         <header className="contact-header">
           <h1 className="gradient-text">Contact Us</h1>
           <p className="lead-text">We’re Here to Help You Smile, Anytime</p>
           <p className="intro-text">
-            At <strong>Akash Dental</strong>, your comfort and convenience matter most. 
-            Whether you have a quick question, need advice, or want to schedule your next visit, 
+            At <strong>Akash Dental</strong>, your comfort and convenience matter most.
+            Whether you have a quick question, need advice, or want to schedule your next visit,
             our friendly staff is always ready to assist.
           </p>
         </header>
@@ -51,48 +52,48 @@ const ContactUs = () => {
         </section>
 
         {/* Quick Contact Form */}
-{/* ==================== Quick Contact Form Section ==================== */}
-<section className="contact-form-section" id="contact-form">
-  <div className="form-card glass-card">
-    <h3>💬 Quick Contact Form</h3>
-    <p className="form-intro-text">
-      Fill out the form below and our team will get back to you within 24 hours.
-    </p>
-    <Form>
-      <div className="form-row">
-        <Form.Group className="mb-3 col-6" controlId="formName">
-          <Form.Label>Name</Form.Label>
-          <Form.Control type="text" placeholder="Enter your name" />
-        </Form.Group>
+        {/* ==================== Quick Contact Form Section ==================== */}
+        <section className="contact-form-section" id="contact-form">
+          <div className="form-card glass-card">
+            <h3>💬 Quick Contact Form</h3>
+            <p className="form-intro-text">
+              Fill out the form below and our team will get back to you within 24 hours.
+            </p>
+            <Form>
+              <div className="form-row">
+                <Form.Group className="mb-3 col-6" controlId="formName">
+                  <Form.Label>Name</Form.Label>
+                  <Form.Control type="text" placeholder="Enter your name" />
+                </Form.Group>
 
-        <Form.Group className="mb-3 col-6" controlId="formContact">
-          <Form.Label>Phone</Form.Label>
-          <Form.Control type="number" placeholder="Enter phone" />
-        </Form.Group>
-        <Form.Group className="mb-3 col-6" controlId="formContact">
-          <Form.Label>Email</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-        </Form.Group>
-      </div>
+                <Form.Group className="mb-3 col-6" controlId="formContact">
+                  <Form.Label>Phone</Form.Label>
+                  <Form.Control type="number" placeholder="Enter phone" />
+                </Form.Group>
+                <Form.Group className="mb-3 col-6" controlId="formContact">
+                  <Form.Label>Email</Form.Label>
+                  <Form.Control type="email" placeholder="Enter email" />
+                </Form.Group>
+              </div>
 
-      <div className="form-row">
-        <Form.Group className="mb-3 col-6" controlId="formMessage">
-          <Form.Label>Message / Dental Concern</Form.Label>
-          <Form.Control as="textarea" rows={3} placeholder="Describe your concern" />
-        </Form.Group>
+              <div className="form-row">
+                <Form.Group className="mb-3 col-6" controlId="formMessage">
+                  <Form.Label>Message / Dental Concern</Form.Label>
+                  <Form.Control as="textarea" rows={3} placeholder="Describe your concern" />
+                </Form.Group>
 
-        <Form.Group className="mb-3 col-6" controlId="formDate">
-          <Form.Label>Preferred Appointment Date (optional)</Form.Label>
-          <Form.Control type="date" />
-        </Form.Group>
-      </div>
+                <Form.Group className="mb-3 col-6" controlId="formDate">
+                  <Form.Label>Preferred Appointment Date (optional)</Form.Label>
+                  <Form.Control type="date" />
+                </Form.Group>
+              </div>
 
-      <Button variant="primary" type="submit" className="submit-button">
-        Submit
-      </Button>
-    </Form>
-  </div>
-</section>
+              <Button variant="primary" type="submit" className="submit-button">
+                Submit
+              </Button>
+            </Form>
+          </div>
+        </section>
 
 
         {/* Map */}
@@ -121,8 +122,12 @@ const ContactUs = () => {
           <div className="cta-card gradient-card">
             <h3>Your Smile Journey Starts with a Single Step.</h3>
             <div className="cta-buttons">
-              <a href="BookAppointment" className="cta-btn primary-btn">Book Appointment</a>
-              <Button href="PayOnline" variant="outline-light" className="cta-btn secondary-btn">Pay Online</Button>
+              <Link to="/BookAppointment" className="cta-btn primary-btn">
+                Book Appointment
+              </Link>
+              <Button as={Link} to="/PayOnline" variant="outline-light" className="cta-btn secondary-btn">
+                Pay Online
+              </Button>
             </div>
           </div>
         </section>

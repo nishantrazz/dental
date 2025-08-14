@@ -1,6 +1,7 @@
 // src/pages/Blog.jsx
 import React from "react";
 import { Card, Button, Row, Col, Form, ListGroup } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
@@ -83,9 +84,12 @@ function Blog() {
                 Schedule a consultation with our dental experts today and take the first step
                 toward a healthier smile.
               </p>
-          <div className="cta-buttons">
-            <a href="BookAppointment" className="cta-btn primary-btn">Book Appointment</a>
-          </div>
+              <div className="cta-buttons">
+                <Link to="/BookAppointment" className="cta-btn primary-btn">
+                  Book Appointment
+                </Link>
+
+              </div>
             </section>
           </Col>
 
